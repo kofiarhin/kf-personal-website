@@ -1,0 +1,99 @@
+/* general stying */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  max-width: 96%;
+  margin: 0 auto;
+}
+
+/* main neader */
+
+.main-header {
+  padding: 2rem 0rem 0rem;
+}
+
+.main-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header a h1,
+nav a {
+  color: white;
+}
+
+.main-header nav a {
+  margin-left: 0.8rem;
+}
+
+/* banner */
+
+#banner {
+  background-image: url("../img/code.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+  width: 540px;
+  max-width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  text-align: center;
+  color: white;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.banner-content .slug {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+}
+
+.banner-content a {
+  color: white;
+  background: blue;
+  padding: 0.8rem 3rem;
+  font-size: 1.2rem;
+}
