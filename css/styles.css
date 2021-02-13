@@ -26,7 +26,7 @@ a {
 
 .container {
   width: 1200px;
-  max-width: 96%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -45,10 +45,61 @@ a {
 .main-header a h1,
 nav a {
   color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
+.main-header a h1 {
+  font-size: 3rem;
+}
 .main-header nav a {
   margin-left: 0.8rem;
+}
+
+.menu {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  z-index: 4000;
+}
+
+#sidenav {
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 8000;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-120%);
+  transition: all ease-in-out 400ms;
+}
+
+#sidenav.active {
+  display: flex;
+  transform: translateX(0%);
+}
+
+.close {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#sidenav li {
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+#sidenav li a {
+  color: white;
+  font-size: 2rem;
 }
 
 /* banner */
@@ -96,4 +147,33 @@ nav a {
   background: blue;
   padding: 0.8rem 3rem;
   font-size: 1.2rem;
+}
+
+/* media queries */
+
+@media (max-width: 800px) {
+  .main-header nav {
+    display: none;
+  }
+
+  .main-header a h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-header .menu {
+    display: block;
+  }
+
+  /* banner */
+  .banner-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .banner-content .slug {
+    font-size: 1.2rem;
+  }
+  .banner-content a {
+    font-size: 1rem;
+  }
 }
