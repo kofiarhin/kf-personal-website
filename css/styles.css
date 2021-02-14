@@ -10,6 +10,10 @@ body {
   font-family: "Fira Sans", sans-serif;
 }
 
+body {
+  padding-bottom: 100rem;
+}
+
 h1,
 h2,
 h3,
@@ -28,6 +32,12 @@ a {
   width: 1200px;
   max-width: 90%;
   margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;s
 }
 
 /* main neader */
@@ -149,9 +159,62 @@ nav a {
   font-size: 1.2rem;
 }
 
+#about {
+  height: 70vh;
+  padding-top: 2rem;
+}
+
+#about .content-wrapper {
+  width: 960px;
+  max-width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+
+#about .thumb-unit {
+  width: 100%;
+  padding-top: 50%;
+  background-image: url("../img/me.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#about .content-wrapper h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#about .content-wrapper p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+#about .content-wrapper .text-wrapper {
+  flex: 1;
+}
+.social-wrapper i {
+  font-size: 2rem;
+  margin-left: 1rem;
+  transition: all ease-in-out 300ms;
+}
+
+.social-wrapper i:hover {
+  transform: scale(1.2);
+  color: blue;
+}
 /* media queries */
 
 @media (max-width: 800px) {
+
+
+
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
   .main-header nav {
     display: none;
   }
@@ -175,5 +238,18 @@ nav a {
   }
   .banner-content a {
     font-size: 1rem;
+  }
+
+
+  /* about */
+  #about .content-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+
+  #about .content-wrapper .thumb-unit {
+    padding-top: 80%;
+    width: 80%;
+    margin: 0 auto; 
   }
 }
