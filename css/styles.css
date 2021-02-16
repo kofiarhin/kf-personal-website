@@ -298,9 +298,78 @@ nav a {
 
 
 
+/* testimonials */
+#testimonials {
+  padding-bottom: 2rem;
+}
+
+#testimonials .container {
+  width: 540px;
+  max-width: 90%; 
+  margin: 0 auto;
+}
+
+#testimonials .text-wrapper {
+  position: relative;
+  height: 200px;
+  margin-bottom: 1.8rem;
+
+}
+
+#testimonials .text-wrapper .text-unit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: all ease-in-out 300ms;
+  transform: translateX(200px);
+}
+
+#testimonials .text-wrapper .text-unit.active {
+  opacity: 1;
+  transform: translateX(0px)
+}
 
 
+#testimonials .face-wrapper {
+  display: flex;
+  justify-content: center;
+}
+#testimonials .face-wrapper .face {
+  width: 50px;
+  height: 50px;
+  background: purple;
+  border-radius: 50px;
+  margin-left: 0.8rem;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+  background-image: url("../img/person-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
+#testimonials .face-wrapper .face:nth-child(2) {
+  background-image: url("../img/person-2.jpg")
+}
+
+#testimonials .face-wrapper .face:nth-child(3) {
+  background-image: url("../img/person-3.jpg")
+}
+
+#testimonials .face-wrapper .face:nth-child(4) {
+  background-image: url("../img/person-4.jpg")
+}
+
+#testimonials .face-wrapper .face.active {
+  transform: scale(1.4);
+  border: 4px solid red;
+}
 
 
 /* media queries */
@@ -387,5 +456,10 @@ nav a {
 
    #projects .container {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* testimonials */
+  #testimonial .text-wrapper .text-unit {
+    font-size: 1rem;
   }
 }
