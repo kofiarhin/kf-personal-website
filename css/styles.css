@@ -5,6 +5,8 @@
   box-sizing: border-box;
 }
 
+
+
 html,
 body {
   font-family: "Fira Sans", sans-serif;
@@ -183,12 +185,12 @@ nav a {
 }
 
 #about .content-wrapper h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 #about .content-wrapper p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -299,8 +301,10 @@ nav a {
 
 
 /* testimonials */
+
+
 #testimonials {
-  padding-bottom: 2rem;
+  padding: 2rem 0rem;
 }
 
 #testimonials .container {
@@ -311,8 +315,8 @@ nav a {
 
 #testimonials .text-wrapper {
   position: relative;
-  height: 200px;
-  margin-bottom: 1.8rem;
+  height: 100px;
+  margin-bottom: 4rem;
 
 }
 
@@ -325,7 +329,6 @@ nav a {
   font-size: 1.2rem;
   text-align: center;
   display: flex;
-  align-items: center;
   opacity: 0;
   transition: all ease-in-out 300ms;
   transform: translateX(200px);
@@ -336,6 +339,18 @@ nav a {
   transform: translateX(0px)
 }
 
+
+#testimonials .text-wrapper .text-unit h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: rgb(97, 95, 95); 
+}
+
+#testimonials .text-wrapper .text-unit p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: rgb(97, 95, 95);
+}
 
 #testimonials .face-wrapper {
   display: flex;
@@ -367,12 +382,21 @@ nav a {
 }
 
 #testimonials .face-wrapper .face.active {
-  transform: scale(1.4);
-  border: 4px solid red;
+  transform: scale(2);
+  border: 4px solid #1a508b;
 }
 
 
+
+
+
+
+
+
+
 /* media queries */
+
+/* larger screen */
 
 @media (max-width: 800px) {
 
@@ -429,7 +453,23 @@ nav a {
   #projects .container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  #testimonials .text-wrapper .text-unit h1 {
+
+      font-size: 1.4rem;
+  }
+
+  #testimonials .text-wrapper .text-unit p {
+
+    font-size: 1rem;
+
+  }
 }
+
+
+
+
+
 
 
 
@@ -438,6 +478,12 @@ nav a {
 
 /* smaller screens */
 @media(max-width: 500px){
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  /* services */
 
   #services .container {
     width: 80%;
@@ -454,6 +500,7 @@ nav a {
     font-size: 1.2rem;
   }
 
+  /* projects */
    #projects .container {
     grid-template-columns: repeat(1, 1fr);
   }
