@@ -38,3 +38,12 @@ function clear() {
 
   console.log("cleared");
 }
+
+renderYear();
+
+function renderYear() {
+  const domYear = document.querySelector(".year");
+  const year = new Date().getFullYear();
+
+  domYear.textContent = year;
+}
